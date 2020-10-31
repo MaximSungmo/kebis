@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>basic</title>
+
+    <link rel="stylesheet" href="recruit.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+
+    <style>
+
+        h, td, tr, input, textarea, select, FORM
+ {
+   font-family:고딕;
+  font-size:1em;
+  border-radius:5px;
+  
+ }
+ 
+ table, FORM
+ {
+  border:1px
+  border-spacing:15px;
+ }
+
+ 
+ </style>
+</head>
+
+<body>
+
+    <!--header-->
+    <div class="header">
+        <div class="container">
+
+            <!--logo-->
+            <div class="logo">
+                <a href="../main/main.html"><img src="image/main_logo2.png" alt="깨비야놀자"></a>
+            </div>
+            <!-- //logo-->
+
+            <button type="button" class="mgnb">
+                <span></span>
+			    <span></span>
+			    <span></span>
+            </button>
+            <!--gnbWrap-->
+            <div class="gnbWrap">
+                <button type="button" class="mgnb-close">모바일메뉴닫기</button>
+                <ul class='gnb clearfix'>
+                    <li><a href="#">로그인</a>
+                    <ul class="two">
+                            <li><a href="../login/login_main.html">로그인 하기</a></li>
+                            <li><a href="../join/join_main.html">회원가입 하기</a></li>
+                        </ul></li>
+                        
+                    <li><a href="#">교구스토어</a>
+                    <ul class="two">
+						<li><a href="../store/store.html">교구 둘러보기</a></li>  
+                        </ul></li>
+                        
+                    <li><a href="#">돌봄신청</a>
+                    <ul class="two">
+                            <li><a href="../teacher/produce.html">깨비 선생님은</a></li>
+                            <li><a href="../teacher_profile/index.html">선생님 프로필</a></li>
+                            <li><a href="../counseling/basic.html">상담신청</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">공지사항</a>
+                        <ul class="two">
+                            <li><a href="../notice/notice.html">공지사항</a></li>
+                            <li><a href="../notice/notice_1.html">Q&A</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">회사소개</a>
+                        <ul class="two">
+						  <li><a href="../company/business_03.html">스토리</a></li>
+                            <li><a href="../map/map.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- // gnbWrap-->
+
+
+        </div>
+    </div>
+    <!-- //header-->
+
+
+    <!--contents-wrap-->
+    <div class='contents-wrap'>
+        <div class='container'>
+
+
+            <a href="#" class="left-banner"><img src="image/leftimg.png" alt="왼쪽배너"></a>
+            <a href="#" class="banner"><img src="image/teacher_banner.png" alt="배너"></a>
+
+           
+           <div class='recruit_img'>
+                
+              <a href="#"><img src="image/recruit.jpg" width="1260px"></a>
+              
+            </div>
+           
+            <center>
+                <p class="large-title"> 교사 온라인 지원</p>
+               <hr>
+                  
+
+              
+              
+              
+             
+               
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="onlineForm_relative">
+	<colgroup>
+		<col width="25%">
+		<col width="*">
+	</colgroup>
+	<tbody>
+	<tr>
+		<th>이름</th>
+		<td><input type="text" name="username" class="form_input1" style="width:70%;"></td>
+	</tr>
+	
+	<tr>
+		<th>휴대 전화</th>
+		<td>
+		
+
+                                <select class="tel">
+                                    <option> 010 </option>
+                                    <option> 011 </option>
+                                    <option> 016 </option>
+                                    <option> 018 </option>
+                                </select>
+                                <input type="text" size="6" class="tel" /> - <input type="text" size="6" class="tel"/>
+                            </td>
+	</tr>
+	<tr>
+		<th>주소 (시/구/동까지 입력)</th>
+		<td>
+			<input type="text" id="email" name="email" style="width:70%;" class="form_input1">
+			<!-- 이메일형식 정규식 체크 출력부 -->
+			&nbsp;<span id="email_valid_result_area"></span>
+			<input class="default mobile" type="button" value="주소찾기" />
+		</td>
+	</tr>
+	<tr>
+		<th>신청 내용</th>
+		<td><textarea name="content" cols="82" rows="5" class="textarea" style="width:95%;"></textarea></td>
+	</tr>
+	<tr>
+		<th>첨부 파일</th>
+		<td><input type="file" name="userfile1" class="form_input1" style="width:95%;"></td>
+	</tr>
+  </tbody></table>  
+               
+               <hr>
+                <br />
+                
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tbody><tr>
+			<td height="10" colspan="3"></td>
+		</tr>
+		<tr>
+			<td width="10"></td>
+			<td>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tbody><tr>
+						<td><textarea style="width:98%;height:180px; font-family:NanumGothic; color:#888888; border:1px solid #ddd" readonly="readonly">	㈜에스와이에듀는(이하 '회사'는) 고객님의 개인정보를 중요시하며, 정보통신망 이용촉진 및 정보보호에 관한 법률을 준수하고 있습니다.
+	회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 
+	개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 
+	회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
+
+	제1조 수집하는 개인정보 항목 (필수/선택)
+	 ① 회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+	  1. 수집항목 : 아이디, 이름, 비밀번호, 자택 주소, 휴대전화번호, 이메일, 메일수신동의, SMS수신동의
+	  2. 개인정보 수집방법 : 히히호호 홈페이지(PC, 모바일) 회원가입, 교육문의, 교사모집 
+
+	제2조 개인정보의 수집 및 이용목적 
+	  ① 회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 
+	  이용 목적이 변경되는 경우에는 개인정보 보호법 제 18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다. 
+	  1. 회원 관리 : 개인 식별, 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 연령확인, 만14세 미만 아동 개인정보 수집 시 
+	  법정 대리인 동의여부 확인, 불만처리 등 민원처리, 고지사항 전달
+	  2. 마케팅 및 광고에 활용 : 신규 서비스(제품) 개발 및 특화, 이벤트 등 광고성 정보 제공 및 참여기회 제공, 인구통계학적 특성에 따른 
+	  서비스 제공 및 광고 게재, 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+
+	제3조 개인정보의 보유 및 이용기간
+	 ① 회사는 정보주체로부터 개인정보를 수집할 때 동의 받은 개인정보 보유•이용기간 또는 법령에 따른 개인정보 보유•이용기간 내에서 
+	 개인정보를 처리•보유합니다.
+	 ② 단, 관련 법령 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간을 보유하여야 할 필요가 있는 경우 
+	 일정 기간 보유합니다.
+	1 계약 또는 청약철회 등에 관한 기록 : 5년
+	2 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+	3 방문에 관한 기록 : 3개월 
+	4 설문조사, 이벤트 등 일시적 목적을 위하여 수집한 경우 : 해당 설문조사, 이벤트 등이 종료된 때
+
+	제4조 개인정보의 파기절차 및 방법
+	 ① 회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.
+	 1. 파기절차
+	  회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 
+	  기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기됩니다. 
+	  별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.
+	 2. 파기방법
+	   - 전자적 파일형태인 경우 : 복원 불가능한 기술적 방법으로 영구삭제
+	   - 서면 상에 기재된 형태인 경우 : 물리적 파쇄 또는 소각
+
+	제5조 개인정보 제 3자 제공에 관한 사항
+	 ① 회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.
+	  1. 이용자들이 사전에 동의한 경우
+	2. 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우
+
+	제 6조 개인정보처리의 위탁에 관한 사항
+	 ① 회사는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다. 
+	 ② 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 개인정보 보호법 제 25조에 따라 위탁업무 수행목적 외 
+	 개인정보 처리금지, 기술적∙관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리∙감독, 손해배상 등 책임에 관한 사항을 
+	 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다. 
+	 ③ 회사의 개인정보 위탁업무 및 업체는 아래와 같습니다. 개인정보 보유 및 이용기간은 서비스 목적 달성 후 또는 위탁 계약 종료시까지입니다. 
+	  1. ㈜감각디자인 : 웹사이트, 시스템 유지보수 및 관리 
+	  2. SY에듀 교사 : 입회 상담 등 회원 관리 
+
+	제7조 이용자 및 법정대리인의 권리와 그 행사방법
+	 ① 이용자 및 법정 대리인은 언제든지 개인정보 열람∙정정∙삭제∙처리정지 요구 등의 권리를 행사할 수 있습니다.
+	 ② 제 1항에 따른 권리 행사는 회사에 대해 개인정보보호법 시행령 제 41조 1항에 따라 서면, 전자우편, FAX 등을 통하여 하실 수 있으며, 
+	 회사는 이에 대해 지체없이 조치하겠습니다.
+	③ 제 1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 
+	이 경우 개인정보 보호법 시행규칙 별지 제 11호 서식에 따른 위임장을 제출하셔야 합니다.
+	 ④ 개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 5항, 제 37조 2항에 의하여 정보주체의 권리가 제한될 수 있습니다. 
+	 ⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
+	 ⑥ 회사는 정보주체 권리에 따른 열람의 요구, 정정∙삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 
+	 본인이거나 정당한 대리인인지를 확인합니다.
+		
+	제8조 개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항
+	 ① 회사는 쿠키 등 인터넷 서비스 이용 시 자동 생성되는 개인정보를 수집하는 장치를 운영하지 않습니다.
+
+	제9조 개인정보에 관한 민원서비스
+	 ① 회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보관리책임자 및 담당부서를 지정하고 있습니다.
+	-	개인정보관리책임자
+	 • 성명 : 정상윤
+	 • 직책 : 대표
+	 • 전화번호 : 1688-6775
+	 • 이메일 : brainheho@naver.com
+
+	-	개인정보 보호 담당부서
+	• 부서명 : 마케팅팀
+	• 연락처 : 1688-6775
+
+	 ② 귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 
+	 담당부서로 신고하실 수 있습니다.
+	 회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다. 기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 
+	 아래 기관에 문의하시기 바랍니다.
+
+	 1. 개인분쟁조정위원회 (privacy.kisa.or.kr/(국번없이)118)
+	 2. 정보보호마크인증위원회 (www.eprivacy.or.kr/02-580-0533~4)
+	 3. 대검찰청 인터넷범죄수사센터 (www.spp.go.kr/02-3480-3573)
+	 4. 경찰청 사이버테러대응센터 (www.netan.go.kr/1566-0112)
+
+	제10조 개인정보 안전성 확보조치에 관한 사항
+	① 회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.
+	1. 관리적 조치 : 회사는 개인 정보 관련 직원을 최소한의 인원으로 운영하며 정기 또는 수시로 담당자 교육을 통하여 
+	개인정보보호 정책을 준수하도록 노력하고 있습니다. 또한 회사의 개인정보보호 보호지침 이행 및 준수여부를 감시하기 위한 
+	별도 절차를 마련하여 운영하고 있으며, 문제점이 발견될 경우 지체없이 시정 및 개선하는 등의 필요한 조치를 취하고 있습니다.
+	2. 기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 고유식별정보 등의 암호화, 보안프로그램 설치
+
+	제11조 개인정보처리방침의 변경
+	 ① 현 개인정보처리방침 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지의 '공지사항'을 통해 고지할 것입니다. 
+	 다만, 개인정보의 수집 및 활용, 제3자 제공 등과 같이 이용자 권리의 중요한 변경이 있을 경우에는 최소 30일 전에 고지합니다.
+	- 공고일자 : 2017년 4월 1일 
+	- 시행일자 : 2017년 4월 8일
+
+
+	</textarea></td>
+					</tr>
+					<tr>
+						<td height="10"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="ch_flag" id="ch_flag" style="border:0px; vertical-align:middle;"> 개인정보취급방침 동의</td>
+					</tr>
+					<tr><td height="35" colspan="3" bgcolor="#ffffff"></td></tr>
+					<tr><td height="1" colspan="3" bgcolor="#353638"></td></tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+
+                <div class="join-btn">
+                    <input class="submit-btn" type="submit" value="지원하기" />
+                    <input type="reset" value="다시 입력" />
+                </div>
+                <!--
+  <button type="submit" class="btn_login"  disabled>가입하기</button>
+    <button type="submit" class="btn_login"  disabled>다시입력</button>
+    -->
+
+            </center>
+
+        </div>
+    </div>
+    <!-- //contents-wrap-->
+
+
+     <!--footer-->
+    <div class="footer">
+        <div class="container">
+           
+            <!--boxwrap-->
+            <div class="clearfix boxwrap">
+                <div class="box">
+                    <p class="title">
+                        <a href="#">BRAND</a>
+                    </p>
+                    <ul>
+                        <li><a href="../company/business_03.html"> 회사소개 </a></li>
+                        <li><a href="../map/map.html">오시는 길</a></li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <p class="title">
+                        <a href="#">PROGRAM</a>
+                    </p>
+                    <ul>
+                        <li><a href="../store/store.html">교구둘러보기</a></li>
+                        <li><a href="#">교구추천받기</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <p class="title">
+                        <a href="#">TEACHER</a>
+                    </p>
+                    <ul>
+                        <li><a href="..//teacher/produce.html">깨비쌤 소개</a></li>
+                        <li><a href="../teacher_profile/index.html">선생님 둘러보기</a></li>
+                        <li><a href="../teacher_recruit/recruit.html">깨비쌤 지원하기</a></li>
+                    </ul>
+                </div>
+
+                
+
+                <div class="box">
+                    <p class="title">
+                        <a href="#">NOTICE</a>
+                    </p>
+                    <ul>
+                        <li><a href="../notice/notice.html">공지사항</a></li>
+                        <li><a href="../notice/notice_1.html">자주하는 질문</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--//boxwrap-->
+
+            <!--copy-->
+            <div class="copy">
+                <div class="Contact_btn clearfix">
+                    <a href="/pageView/315?t=1592268898731" class="btn btn-default btn-sm">개인정보취급방침</a>
+                    <a href="#myModal2" data-toggle="modal" data-target="#myModal2" class="btn btn-default btn-sm">이용약관</a>
+                </div>
+                <address class="address">
+
+                    <p class="title">(주)에스와이에듀 대표 : 정상윤</p>
+                    <p>사업자번호 : 104-86-53007</p>
+                    <p>주소: 서울특별시 중구 서소문로 89, 순화빌딩 15층</p>
+                    <p>대표전화: 0000-0000</p>
+
+                </address>
+                <p class="copyright">Copyright ⓒ 0000. All Rights Reserved.</p>
+            </div>
+            <!-- //copy-->
+
+        </div>
+    </div>
+    <!--//footer-->
+
+    <!--quickmenu-->
+    <ul id="quickmenu">
+        <li class="quick_li_01">QUICK</li>
+        <li class="quick_li_02">
+            <a href="#">
+                <img src="image/rightimg.jpg">
+                <p>교육문의</p>
+            </a>
+        </li>
+        <li class="quick_li_03">
+            <p>고객센터</p>
+            <strong>
+                1688<br>~<br>6775
+            </strong>
+        </li>
+        <li class="quick_li_02">
+            <a href="../teacher_recruit/recruit.html">
+                <img src="image/rightimg.jpg">
+                <p>교사모집</p>
+            </a>
+        </li>
+        <li class="quick_li_04">
+            <a href="#header" class="top_btn">TOP<img src="image/quick_top.png"></a>
+        </li>
+    </ul>
+    <!-- //quickmenu-->
+
+
+
+</body>
+</html>
