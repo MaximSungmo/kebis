@@ -119,38 +119,38 @@
             <table class="join-form" cellspacing="1">
                 <form id="join_form">
                     <tr>
-
                         <td text-align="center">아이디</td>
                         <td>
-                            <input type="text" name="id"/>
+                            <input type="text" name="id" id="id"/>
                             <input class="default mobile" type="button" value="중복확인" onclick="exists()"/>
                         </td>
                     </tr>
 
                     <tr>
                         <td> 비밀번호</td>
-                        <td><input type="password" name="password"/></td>
+                        <td><input type="password" name="password" id="password"/></td>
                     </tr>
 
 
                     <tr>
                         <td> 비밀번호 확인</td>
-                        <td><input type="password"/><span class="txt-gr ml10">*비밀번호를 다시 입력해주세요.</span></td>
+                        <td><input type="password" id="password_check"/><span class="txt-gr ml10" id="check_text">*비밀번호를 다시 입력해주세요.</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td> 본인 성명</td>
-                        <td><input type="text" name="userName"/></td>
+                        <td><input type="text" name="userName" id="userName"/></td>
                     </tr>
 
                     <tr>
                         <td> 아이 성명</td>
-                        <td><input type="text" name="kidName"/></td>
+                        <td><input type="text" name="kidName" id="kidName"/></td>
                     </tr>
 
                     <tr>
                         <td> 아이 나이</td>
-                        <td><input type="text" name="kidAge"/></td>
+                        <td><input type="text" name="kidAge" id="kidAge"/></td>
                     </tr>
 
 
@@ -175,8 +175,8 @@
                     <tr>
                         <td> 이메일</td>
                         <td>
-                            <input type="text"/> @ <input type="text"/> &nbsp;&nbsp;
-                            <select>
+                            <input type="text" id="email_prefix"/> @ <input type="text" id="email_postfix"/> &nbsp;&nbsp;
+                            <select id="email_selectbox">
                                 <option> 직접입력</option>
                                 <option> naver.com</option>
                                 <option> daum.net</option>
@@ -188,14 +188,14 @@
                     <tr>
                         <td> 주소</td>
                         <td>
-                            <input type="text"/>
+                            <input type="text" name="address" id="address"/>
                             <input class="default mobile" type="button" value="주소찾기"/>
                         </td>
                     </tr>
                     <tr>
                         <td> 상세주소</td>
                         <td>
-                            <input type="text" name="address"/>
+                            <input type="text"/>
                         </td>
                     </tr>
 
@@ -203,20 +203,20 @@
                         <td> 휴대폰</td>
                         <td>
 
-                            <select>
+                            <select id="phone_1">
                                 <option> 010</option>
                                 <option> 011</option>
                                 <option> 016</option>
                                 <option> 018</option>
                             </select>
-                            <input type="text" size="6"/> - <input type="text" size="6"/>
+                            <input type="text" size="6" id="phone_2"/> - <input type="text" size="6" id="phone_3"/>
                         </td>
                     </tr>
 
                     <tr>
                         <td> 하고싶은 말</td>
                         <td>
-                            <textarea cols="60" rows="10"></textarea>
+                            <textarea cols="60" rows="10" id="comments" name="comments"></textarea>
                         </td>
                     </tr>
                 </form>
@@ -346,6 +346,7 @@
 <script>
     let baseUrl = "";
     let frontUrl = "";
+    let duplicationCheck = false;
     const hostName = window.location.hostname;
     if (hostName === "localhost") {
         frontUrl = "http://localhost:63342/kebi"
@@ -357,13 +358,60 @@
 
     const userApi = new UserApi();
 
-
     function join() {
-        const a = $("#join_form").serialize();
-        userApi.createUsers(a).done(json => {
-            window.location.href = frontUrl + "/login/login_main.html"
-        });
+
+        if(!$("#id").val()){
+            alert("아이디가 없습니다");
+            return false;
+        }
+        if(!$("#password").val()){
+            alert("비밀번호가 없습니다");
+            return false;
+        }
+        exists();
+        let a = $("#join_form").serialize();
+        const pre = $("#email_prefix").val();
+        const post = $("#email_postfix").val();
+        const phone = $("#phone_1").val() +"-"+ $("#phone_2").val() +"-"+ $("#phone_3").val();
+        a += `&email=${pre}@${post}`;
+        a += `&phone=${phone}`
+        if (duplicationCheck) {
+            userApi.createUsers(a).done(json => {
+                window.location.href = frontUrl + "/login/login_main.html"
+            });
+        }
     }
 
+    function exists() {
+        const id = $("#id").val();
+        userApi.existsUsers({id: id}).done(json => {
+            if (json.result) {
+                duplicationCheck = false;
+                alert("중복된 아이디입니다. 다른 아이디를 입력하세요")
+            } else {
+                duplicationCheck = true;
+                alert("중복체크가 통과되었습니다.")
+            }
+        });
+        console.log(duplicationCheck)
+    }
+
+    function passwordCheck() {
+        if ($("#password").val() === $("#password_check").val()) {
+            $("#check_text")[0].innerText = "비밀번호가 동일합니다."
+        } else {
+            $("#check_text")[0].innerText = "*비밀번호를 다시 입력해주세요."
+        }
+
+    }
+
+    $("#password, #password_check").on("change", function () {
+        passwordCheck();
+    })
+
+    $("#email_selectbox").on("change", function () {
+        const sel = $("#email_selectbox").val();
+        $("#email_postfix").val(sel);
+    })
 </script>
 </html>
