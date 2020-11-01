@@ -50,15 +50,18 @@
         <!--gnbWrap-->
         <div class="gnbWrap">
             <button type="button" class="mgnb-close">모바일메뉴닫기</button>
+
             <ul class='gnb clearfix'>
-                <li><a href="#">로그인</a>
+                <li class="login_before">
+                    <a href="#">로그인</a>
                     <ul class="two">
                         <li><a href="../login/login_main.html">로그인 하기</a></li>
                         <li><a href="../join/join_main.html">회원가입 하기</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">교구스토어</a>
+                <li>
+                    <a href="#">교구스토어</a>
                     <ul class="two">
                         <li><a href="../store/store.html">교구 둘러보기</a></li>
                     </ul>
@@ -85,11 +88,18 @@
                         <li><a href="../map/map.html">오시는 길</a></li>
                     </ul>
                 </li>
+
+                <li class="login_after">
+                    <a href="#">마이페이지</a>
+                    <ul class="two">
+                        <li><a href="../main/main.html" onclick="logout()">로그아웃</a></li>
+                        <li><a href="../update/update.html">회원정보 수정</a></li>
+                        <li><a href="#">깨비캠</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- // gnbWrap-->
-
-
     </div>
 </div>
 <!-- //header-->
