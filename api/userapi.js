@@ -5,7 +5,7 @@ class UserApi {
         if (hostName === "localhost") {
             this.baseUrl = "http://localhost:8081"
         } else {
-            this.baseUrl = "https://spring-boot-1604154327452.azurewebsites.net/uesrs";
+            this.baseUrl = "https://spring-boot-1604154327452.azurewebsites.net";
         }
     }
 
