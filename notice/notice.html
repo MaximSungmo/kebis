@@ -253,14 +253,14 @@
 
 
     function popup(id) {
-        let url = `detail.html?id=${id}`;
+        let url = `detail.html?id=${id}&type=notice`;
         let name = "popup test";
         let option = "width = 500, height = 500, top = 100, left = 200, location = no"
         window.open(url, name, option);
     }
 
     function popupInsert() {
-        let url = "insert.html";
+        let url = "insert.html?type=notice";
         let name = "popup test";
         let option = "width = 500, height = 500, top = 100, left = 200, location = no"
         window.open(url, name, option);

@@ -12,10 +12,10 @@
 <body>
 <form id="board_insert">
     <input name="writer" value="admin" type="hidden">
-    <input name="type" value="notice" type="hidden">
+    <input name="type" value="" type="hidden" id="type">
     <div class="col-12">
-        <label for="name" class="col-form-label"> 제목 </label>
-        <input class="form-control" name="title" id="name"/>
+        <label for="title" class="col-form-label"> 제목 </label>
+        <input class="form-control" name="title" id="title"/>
 
     </div>
     <div>
@@ -24,7 +24,7 @@
     </div>
 </form>
 <div class="text-right">
-    <button class="btn btn-primary" onclick="save()">저장</button>
+    <button class="btn btn-primary" onclick="save()" id="save_btn">저장</button>
 </div>
 </body>
 <script src="../api/userapi.js"></script>
@@ -32,14 +32,19 @@
 <script src="../api/common.js"></script>
 <script>
     const boardApi = new BoardApi();
-
+    const type = getParameterByName("type");
     function save() {
         const board = $("#board_insert").serialize();
+        console.log(board)
         boardApi.createBoard(board);
         setTimeout(function () {
             opener.parent.reRendering();
             window.close();
         }, 500)
+    }
+    setData();
+    function setData(){
+        $("#type").val(type);
     }
 </script>
 </html>

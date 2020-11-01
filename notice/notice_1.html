@@ -105,27 +105,12 @@
 
         <center>
             <p class="large-title"> 자주하는 질문</p>
-            <table class="join-form" cellspacing="1" border="1px">
-
-                <tr>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>조회</th>
-                </tr>
-
-                <tr>
-                    <td><a href="#">[배송] 교구스토어 배송 </a></td>
-                    <td>관리자</td>
-                    <td>13:49</td>
-                    <td>0</td>
-                </tr>
-
+            <table class="join-form" cellspacing="1" border="1px" id="notice">
 
             </table>
 
             <br/>
-
+            <button id="write" type="button" class="btn btn-primary" onclick="popupInsert()">글쓰기</button>
 
             <!--
 <button type="submit" class="btn_login"  disabled>가입하기</button>
@@ -240,4 +225,80 @@
 
 
 </body>
+<script src="../api/userapi.js"></script>
+<script src="../api/boardapi.js"></script>
+<script src="../api/common.js"></script>
+<script>
+    let baseUrl = "";
+    let frontUrl = "";
+    const hostName = window.location.hostname;
+    if (hostName === "localhost") {
+        frontUrl = "http://localhost:63342/kebi"
+        baseUrl = "http://localhost:8081"
+    } else {
+        frontUrl = "https://kebi.azurewebsites.net"
+        baseUrl = "https://spring-boot-1604154327452.azurewebsites.net";
+    }
+
+    const boardApi = new BoardApi();
+
+
+    function join() {
+        const a = $("#join_form").serialize();
+        userApi.createUsers(a).done(json => {
+            window.location.href = frontUrl + "/login/login_main.html"
+        });
+    }
+
+    function reRendering() {
+        $("#notice").empty();
+        $("#notice").append(getTable())
+    }
+
+
+    function popup(id) {
+        let url = `detail.html?id=${id}&type=notice_1`;
+        let name = "popup test";
+        let option = "width = 500, height = 500, top = 100, left = 200, location = no"
+        window.open(url, name, option);
+    }
+
+    function popupInsert() {
+        let url = "insert.html?type=notice_1";
+        let name = "popup test";
+        let option = "width = 500, height = 500, top = 100, left = 200, location = no"
+        window.open(url, name, option);
+    }
+
+    function getTable() {
+        let html = "";
+        html += `<tr>
+                    <th colspan="1" width="60%">제목</th>
+                    <th width="20%">작성자</th>
+                    <th width="10%">작성일</th>
+                    <th width="10%">조회</th>
+
+                </tr>
+        `
+        boardApi.getBoardList().done(json => {
+            const result = json.result.filter(v => {
+                return v.type === "notice_1";
+            })
+            result.forEach(tr => {
+                console.log(tr);
+                html += `
+                <tr>
+                    <td><a data-id="${tr.id}" onclick="popup(${tr.id})">${tr.title}</a></td>
+                    <td>관리자</td>
+                    <td>${tr.insertTime.split("T")[0]}</td>
+                    <td>0</td>
+                </tr>
+                `
+            })
+        });
+        return html;
+    }
+
+    $("#notice").append(getTable())
+</script>
 </html>
