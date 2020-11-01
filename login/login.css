@@ -1,5 +1,3 @@
-
-<style>
 a {
     color: #333;
     text-decoration: none;
@@ -168,5 +166,3 @@ input[type=checkbox]:checked + label:before{
     background: #e3023e;
     text-align: center;   
 }
-
-</style>

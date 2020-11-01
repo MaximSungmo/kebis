@@ -94,7 +94,7 @@
                     <ul class="two">
                         <li><a href="../main/main.html" onclick="logout()">로그아웃</a></li>
                         <li><a href="../update/update.html">회원정보 수정</a></li>
-                        <li><a href="#">깨비캠</a></li>
+                        <li><a href="../rasberrypi/raspberrypi.html">깨비캠</a></li>
                     </ul>
                 </li>
             </ul>
@@ -256,7 +256,8 @@
             window.location.href = frontUrl + "/login/login_main.html"
         });
     }
-    function reRendering(){
+
+    function reRendering() {
         $("#notice").empty();
         $("#notice").append(getTable())
     }
@@ -287,8 +288,8 @@
                 </tr>
         `
         boardApi.getBoardList().done(json => {
-            const result = json.result.filter(v=>{
-                return v.type ==="notice";
+            const result = json.result.filter(v => {
+                return v.type === "notice";
             })
             result.forEach(tr => {
                 console.log(tr);

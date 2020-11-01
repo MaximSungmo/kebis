@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>basic</title>
 
     <link rel="stylesheet" href="recruit.css">
@@ -13,169 +13,181 @@
 
     <style>
 
-        h, td, tr, input, textarea, select, FORM
- {
-   font-family:고딕;
-  font-size:1em;
-  border-radius:5px;
-  
- }
- 
- table, FORM
- {
-  border:1px
-  border-spacing:15px;
- }
+        h, td, tr, input, textarea, select, FORM {
+            font-family: 고딕;
+            font-size: 1em;
+            border-radius: 5px;
 
- 
- </style>
+        }
+
+        table, FORM {
+            border: 1px
+            border-spacing: 15px;
+        }
+
+
+    </style>
 </head>
 
 <body>
 
-    <!--header-->
-    <div class="header">
-        <div class="container">
+<!--header-->
+<div class="header">
+    <div class="container">
 
-            <!--logo-->
-            <div class="logo">
-                <a href="../main/main.html"><img src="image/main_logo2.png" alt="깨비야놀자"></a>
-            </div>
-            <!-- //logo-->
+        <!--logo-->
+        <div class="logo">
+            <a href="../main/main.html"><img src="image/main_logo2.png" alt="깨비야놀자"></a>
+        </div>
+        <!-- //logo-->
 
-            <button type="button" class="mgnb">
-                <span></span>
-			    <span></span>
-			    <span></span>
-            </button>
-            <!--gnbWrap-->
-            <div class="gnbWrap">
-                <button type="button" class="mgnb-close">모바일메뉴닫기</button>
-                <ul class='gnb clearfix'>
-                    <li><a href="#">로그인</a>
-                    <ul class="two">
-                            <li><a href="../login/login_main.html">로그인 하기</a></li>
-                            <li><a href="../join/join_main.html">회원가입 하기</a></li>
-                        </ul></li>
-                        
-                    <li><a href="#">교구스토어</a>
-                    <ul class="two">
-						<li><a href="../store/store.html">교구 둘러보기</a></li>  
-                        </ul></li>
-                        
-                    <li><a href="#">돌봄신청</a>
-                    <ul class="two">
-                            <li><a href="../teacher/produce.html">깨비 선생님은</a></li>
-                            <li><a href="../teacher_profile/index.html">선생님 프로필</a></li>
-                            <li><a href="../counseling/basic.html">상담신청</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li><a href="#">공지사항</a>
-                        <ul class="two">
-                            <li><a href="../notice/notice.html">공지사항</a></li>
-                            <li><a href="../notice/notice_1.html">Q&A</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li><a href="#">회사소개</a>
-                        <ul class="two">
-						  <li><a href="../company/business_03.html">스토리</a></li>
-                            <li><a href="../map/map.html">오시는 길</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- // gnbWrap-->
+        <button type="button" class="mgnb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!--gnbWrap-->
+        <div class="gnbWrap">
+            <button type="button" class="mgnb-close">모바일메뉴닫기</button>
 
+            <ul class='gnb clearfix'>
+                <li class="login_before">
+                    <a href="#">로그인</a>
+                    <ul class="two">
+                        <li><a href="../login/login_main.html">로그인 하기</a></li>
+                        <li><a href="../join/join_main.html">회원가입 하기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">교구스토어</a>
+                    <ul class="two">
+                        <li><a href="../store/store.html">교구 둘러보기</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">돌봄신청</a>
+                    <ul class="two">
+                        <li><a href="../teacher/produce.html">깨비 선생님은</a></li>
+                        <li><a href="../teacher_profile/index.html">선생님 프로필</a></li>
+                        <li><a href="../counseling/basic.html">상담신청</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">공지사항</a>
+                    <ul class="two">
+                        <li><a href="../notice/notice.html">공지사항</a></li>
+                        <li><a href="../notice/notice_1.html">Q&A</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">회사소개</a>
+                    <ul class="two">
+                        <li><a href="../company/business_03.html">스토리</a></li>
+                        <li><a href="../map/map.html">오시는 길</a></li>
+                    </ul>
+                </li>
+
+                <li class="login_after">
+                    <a href="#">마이페이지</a>
+                    <ul class="two">
+                        <li><a href="../main/main.html" onclick="logout()">로그아웃</a></li>
+                        <li><a href="../update/update.html">회원정보 수정</a></li>
+                        <li><a href="../rasberrypi/raspberrypi.html">깨비캠</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- // gnbWrap-->
+
+
+    </div>
+</div>
+<!-- //header-->
+
+
+<!--contents-wrap-->
+<div class='contents-wrap'>
+    <div class='container'>
+
+
+        <a href="#" class="left-banner"><img src="image/leftimg.png" alt="왼쪽배너"></a>
+        <a href="#" class="banner"><img src="image/teacher_banner.png" alt="배너"></a>
+
+
+        <div class='recruit_img'>
+
+            <a href="#"><img src="image/recruit.jpg" width="1260px"></a>
 
         </div>
-    </div>
-    <!-- //header-->
+
+        <center>
+            <p class="large-title"> 교사 온라인 지원</p>
+            <hr>
 
 
-    <!--contents-wrap-->
-    <div class='contents-wrap'>
-        <div class='container'>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="onlineForm_relative">
+                <colgroup>
+                    <col width="25%">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" name="username" class="form_input1" style="width:70%;"></td>
+                </tr>
+
+                <tr>
+                    <th>휴대 전화</th>
+                    <td>
 
 
-            <a href="#" class="left-banner"><img src="image/leftimg.png" alt="왼쪽배너"></a>
-            <a href="#" class="banner"><img src="image/teacher_banner.png" alt="배너"></a>
+                        <select class="tel">
+                            <option> 010</option>
+                            <option> 011</option>
+                            <option> 016</option>
+                            <option> 018</option>
+                        </select>
+                        <input type="text" size="6" class="tel"/> - <input type="text" size="6" class="tel"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소 (시/구/동까지 입력)</th>
+                    <td>
+                        <input type="text" id="email" name="email" style="width:70%;" class="form_input1">
+                        <!-- 이메일형식 정규식 체크 출력부 -->
+                        &nbsp;<span id="email_valid_result_area"></span>
+                        <input class="default mobile" type="button" value="주소찾기"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>신청 내용</th>
+                    <td><textarea name="content" cols="82" rows="5" class="textarea" style="width:95%;"></textarea></td>
+                </tr>
+                <tr>
+                    <th>첨부 파일</th>
+                    <td><input type="file" name="userfile1" class="form_input1" style="width:95%;"></td>
+                </tr>
+                </tbody>
+            </table>
 
-           
-           <div class='recruit_img'>
-                
-              <a href="#"><img src="image/recruit.jpg" width="1260px"></a>
-              
-            </div>
-           
-            <center>
-                <p class="large-title"> 교사 온라인 지원</p>
-               <hr>
-                  
+            <hr>
+            <br/>
 
-              
-              
-              
-             
-               
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="onlineForm_relative">
-	<colgroup>
-		<col width="25%">
-		<col width="*">
-	</colgroup>
-	<tbody>
-	<tr>
-		<th>이름</th>
-		<td><input type="text" name="username" class="form_input1" style="width:70%;"></td>
-	</tr>
-	
-	<tr>
-		<th>휴대 전화</th>
-		<td>
-		
-
-                                <select class="tel">
-                                    <option> 010 </option>
-                                    <option> 011 </option>
-                                    <option> 016 </option>
-                                    <option> 018 </option>
-                                </select>
-                                <input type="text" size="6" class="tel" /> - <input type="text" size="6" class="tel"/>
-                            </td>
-	</tr>
-	<tr>
-		<th>주소 (시/구/동까지 입력)</th>
-		<td>
-			<input type="text" id="email" name="email" style="width:70%;" class="form_input1">
-			<!-- 이메일형식 정규식 체크 출력부 -->
-			&nbsp;<span id="email_valid_result_area"></span>
-			<input class="default mobile" type="button" value="주소찾기" />
-		</td>
-	</tr>
-	<tr>
-		<th>신청 내용</th>
-		<td><textarea name="content" cols="82" rows="5" class="textarea" style="width:95%;"></textarea></td>
-	</tr>
-	<tr>
-		<th>첨부 파일</th>
-		<td><input type="file" name="userfile1" class="form_input1" style="width:95%;"></td>
-	</tr>
-  </tbody></table>  
-               
-               <hr>
-                <br />
-                
-                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-		<tbody><tr>
-			<td height="10" colspan="3"></td>
-		</tr>
-		<tr>
-			<td width="10"></td>
-			<td>
-				<table width="100%" cellpadding="0" cellspacing="0" border="0">
-					<tbody><tr>
-						<td><textarea style="width:98%;height:180px; font-family:NanumGothic; color:#888888; border:1px solid #ddd" readonly="readonly">	㈜에스와이에듀는(이하 '회사'는) 고객님의 개인정보를 중요시하며, 정보통신망 이용촉진 및 정보보호에 관한 법률을 준수하고 있습니다.
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                <tr>
+                    <td height="10" colspan="3"></td>
+                </tr>
+                <tr>
+                    <td width="10"></td>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                            <tr>
+                                <td><textarea
+                                        style="width:98%;height:180px; font-family:NanumGothic; color:#888888; border:1px solid #ddd"
+                                        readonly="readonly">	㈜에스와이에듀는(이하 '회사'는) 고객님의 개인정보를 중요시하며, 정보통신망 이용촉진 및 정보보호에 관한 법률을 준수하고 있습니다.
 	회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 
 	개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 
 	회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
@@ -278,136 +290,142 @@
 
 
 	</textarea></td>
-					</tr>
-					<tr>
-						<td height="10"></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="ch_flag" id="ch_flag" style="border:0px; vertical-align:middle;"> 개인정보취급방침 동의</td>
-					</tr>
-					<tr><td height="35" colspan="3" bgcolor="#ffffff"></td></tr>
-					<tr><td height="1" colspan="3" bgcolor="#353638"></td></tr>
-				</tbody></table>
-			</td>
-		</tr>
-	</tbody></table>
+                            </tr>
+                            <tr>
+                                <td height="10"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="ch_flag" id="ch_flag"
+                                           style="border:0px; vertical-align:middle;"> 개인정보취급방침 동의
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="35" colspan="3" bgcolor="#ffffff"></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="3" bgcolor="#353638"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
-                <div class="join-btn">
-                    <input class="submit-btn" type="submit" value="지원하기" />
-                    <input type="reset" value="다시 입력" />
-                </div>
-                <!--
-  <button type="submit" class="btn_login"  disabled>가입하기</button>
-    <button type="submit" class="btn_login"  disabled>다시입력</button>
-    -->
-
-            </center>
-
-        </div>
-    </div>
-    <!-- //contents-wrap-->
-
-
-     <!--footer-->
-    <div class="footer">
-        <div class="container">
-           
-            <!--boxwrap-->
-            <div class="clearfix boxwrap">
-                <div class="box">
-                    <p class="title">
-                        <a href="#">BRAND</a>
-                    </p>
-                    <ul>
-                        <li><a href="../company/business_03.html"> 회사소개 </a></li>
-                        <li><a href="../map/map.html">오시는 길</a></li>
-                    </ul>
-                </div>
-
-                <div class="box">
-                    <p class="title">
-                        <a href="#">PROGRAM</a>
-                    </p>
-                    <ul>
-                        <li><a href="../store/store.html">교구둘러보기</a></li>
-                        <li><a href="#">교구추천받기</a></li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <p class="title">
-                        <a href="#">TEACHER</a>
-                    </p>
-                    <ul>
-                        <li><a href="..//teacher/produce.html">깨비쌤 소개</a></li>
-                        <li><a href="../teacher_profile/index.html">선생님 둘러보기</a></li>
-                        <li><a href="../teacher_recruit/recruit.html">깨비쌤 지원하기</a></li>
-                    </ul>
-                </div>
-
-                
-
-                <div class="box">
-                    <p class="title">
-                        <a href="#">NOTICE</a>
-                    </p>
-                    <ul>
-                        <li><a href="../notice/notice.html">공지사항</a></li>
-                        <li><a href="../notice/notice_1.html">자주하는 질문</a></li>
-                        
-                    </ul>
-                </div>
+            <div class="join-btn">
+                <input class="submit-btn" type="submit" value="지원하기"/>
+                <input type="reset" value="다시 입력"/>
             </div>
-            <!--//boxwrap-->
+            <!--
+<button type="submit" class="btn_login"  disabled>가입하기</button>
+<button type="submit" class="btn_login"  disabled>다시입력</button>
+-->
 
-            <!--copy-->
-            <div class="copy">
-                <div class="Contact_btn clearfix">
-                    <a href="/pageView/315?t=1592268898731" class="btn btn-default btn-sm">개인정보취급방침</a>
-                    <a href="#myModal2" data-toggle="modal" data-target="#myModal2" class="btn btn-default btn-sm">이용약관</a>
-                </div>
-                <address class="address">
+        </center>
 
-                    <p class="title">(주)에스와이에듀 대표 : 정상윤</p>
-                    <p>사업자번호 : 104-86-53007</p>
-                    <p>주소: 서울특별시 중구 서소문로 89, 순화빌딩 15층</p>
-                    <p>대표전화: 0000-0000</p>
-
-                </address>
-                <p class="copyright">Copyright ⓒ 0000. All Rights Reserved.</p>
-            </div>
-            <!-- //copy-->
-
-        </div>
     </div>
-    <!--//footer-->
+</div>
+<!-- //contents-wrap-->
 
-    <!--quickmenu-->
-    <ul id="quickmenu">
-        <li class="quick_li_01">QUICK</li>
-        <li class="quick_li_02">
-            <a href="#">
-                <img src="image/rightimg.jpg">
-                <p>교육문의</p>
-            </a>
-        </li>
-        <li class="quick_li_03">
-            <p>고객센터</p>
-            <strong>
-                1688<br>~<br>6775
-            </strong>
-        </li>
-        <li class="quick_li_02">
-            <a href="../teacher_recruit/recruit.html">
-                <img src="image/rightimg.jpg">
-                <p>교사모집</p>
-            </a>
-        </li>
-        <li class="quick_li_04">
-            <a href="#header" class="top_btn">TOP<img src="image/quick_top.png"></a>
-        </li>
-    </ul>
-    <!-- //quickmenu-->
 
+<!--footer-->
+<div class="footer">
+    <div class="container">
+
+        <!--boxwrap-->
+        <div class="clearfix boxwrap">
+            <div class="box">
+                <p class="title">
+                    <a href="#">BRAND</a>
+                </p>
+                <ul>
+                    <li><a href="../company/business_03.html"> 회사소개 </a></li>
+                    <li><a href="../map/map.html">오시는 길</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <p class="title">
+                    <a href="#">PROGRAM</a>
+                </p>
+                <ul>
+                    <li><a href="../store/store.html">교구둘러보기</a></li>
+                    <li><a href="#">교구추천받기</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <p class="title">
+                    <a href="#">TEACHER</a>
+                </p>
+                <ul>
+                    <li><a href="..//teacher/produce.html">깨비쌤 소개</a></li>
+                    <li><a href="../teacher_profile/index.html">선생님 둘러보기</a></li>
+                    <li><a href="../teacher_recruit/recruit.html">깨비쌤 지원하기</a></li>
+                </ul>
+            </div>
+
+
+            <div class="box">
+                <p class="title">
+                    <a href="#">NOTICE</a>
+                </p>
+                <ul>
+                    <li><a href="../notice/notice.html">공지사항</a></li>
+                    <li><a href="../notice/notice_1.html">자주하는 질문</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--//boxwrap-->
+
+        <!--copy-->
+        <div class="copy">
+            <div class="Contact_btn clearfix">
+                <a href="/pageView/315?t=1592268898731" class="btn btn-default btn-sm">개인정보취급방침</a>
+                <a href="#myModal2" data-toggle="modal" data-target="#myModal2" class="btn btn-default btn-sm">이용약관</a>
+            </div>
+            <address class="address">
+
+                <p class="title">(주)에스와이에듀 대표 : 정상윤</p>
+                <p>사업자번호 : 104-86-53007</p>
+                <p>주소: 서울특별시 중구 서소문로 89, 순화빌딩 15층</p>
+                <p>대표전화: 0000-0000</p>
+
+            </address>
+            <p class="copyright">Copyright ⓒ 0000. All Rights Reserved.</p>
+        </div>
+        <!-- //copy-->
+
+    </div>
+</div>
+<!--//footer-->
+
+<!--quickmenu-->
+<ul id="quickmenu">
+    <li class="quick_li_01">QUICK</li>
+    <li class="quick_li_02">
+        <a href="#">
+            <img src="image/rightimg.jpg">
+            <p>교육문의</p>
+        </a>
+    </li>
+    <li class="quick_li_03">
+        <p>고객센터</p>
+        <strong>
+            1688<br>~<br>6775
+        </strong>
+    </li>
+    <li class="quick_li_02">
+        <a href="../teacher_recruit/recruit.html">
+            <img src="image/rightimg.jpg">
+            <p>교사모집</p>
+        </a>
+    </li>
+    <li class="quick_li_04">
+        <a href="#header" class="top_btn">TOP<img src="image/quick_top.png"></a>
+    </li>
+</ul>
+<!-- //quickmenu-->
 
 
 </body>
