@@ -7,10 +7,11 @@
     <title>basic</title>
 
     <link rel="stylesheet" href="notice.css">
-
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
-
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style>
 
         h, td, tr, input, textarea, select, form {
@@ -109,7 +110,7 @@
             </table>
 
             <br/>
-            <button type="button" onclick="popupInsert()">글쓰기</button>
+            <button id="write" type="button" class="btn btn-primary" onclick="popupInsert()">글쓰기</button>
             <!--
 <button type="submit" class="btn_login"  disabled>가입하기</button>
 <button type="submit" class="btn_login"  disabled>다시입력</button>
@@ -245,6 +246,10 @@
             window.location.href = frontUrl + "/login/login_main.html"
         });
     }
+    function reRendering(){
+        $("#notice").empty();
+        $("#notice").append(getTable())
+    }
 
 
     function popup(id) {
@@ -291,6 +296,5 @@
     }
 
     $("#notice").append(getTable())
-
 </script>
 </html>

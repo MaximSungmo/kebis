@@ -37,10 +37,12 @@ function logout() {
         if(json.result) {
             $(".login_before").hide();
             $(".login_after").show();
+            $("#write").show();
             console.log("auth")
         } else {
             $(".login_before").show();
             $(".login_after").hide();
+            $("#write").hide();
             console.log("no auth")
         }
     });
