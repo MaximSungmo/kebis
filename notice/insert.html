@@ -30,12 +30,9 @@
 <script src="../api/common.js"></script>
 <script>
     const boardApi = new BoardApi();
-    // function save() {
-        const board = {id:1};
-        boardApi.getBoard(board).done(json=>{
-            console.log(json);
-        });
-    // }
+    function save() {
+        const board = $("#board_insert").serialize();
+        boardApi.createBoard(board);
+    }
 </script>
-</body>
 </html>
